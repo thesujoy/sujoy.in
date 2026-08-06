@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Sujoy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Basic -->
+
+  <meta name="description" content="Sujoy">
+  <meta name="keywords" content="Sujoy">
+  <meta name="author" content="Sujoy">
+  <meta name="generator" content="Sujoy">
+  <meta name="application-name" content="Sujoy">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#000428">
+  <meta name="color-scheme" content="light dark">
+
+  <!-- Search Engines -->
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="googlebot" content="index,follow">
+  <meta name="bingbot" content="index,follow">
+
+  <!-- Optional / Legacy -->
+  <meta name="rating" content="general">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sujoy">
+  <meta property="og:description" content="Sujoy">
+  <meta property="og:url" content="https://sujoy.in/">
+  <meta property="og:site_name" content="Sujoy">
+  <meta property="og:image" content="https://sujoy.in/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Website Preview">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:updated_time" content="2026-08-04T00:00:00Z">
+
+  <!-- X (Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sujoy">
+  <meta name="twitter:description" content="Sujoy">
+  <meta name="twitter:image" content="https://example.com/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Website Preview">
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <!-- Apple -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Sujoy">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Microsoft -->
+  <meta name="msapplication-TileColor" content="#000428">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="msapplication-TileImage" content="/mstile-150x150.png">
+
+  <!-- Security (Prefer HTTP Headers) -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+  <meta http-equiv="Permissions-Policy" content="geolocation=()"> -->
+
+  <!-- Cache Control (Optional) -->
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Verification -->
+  <meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">
+  <meta name="msvalidate.01" content="BING_VERIFICATION_CODE">
+  <meta name="p:domain_verify" content="PINTEREST_VERIFICATION_CODE">
+  <meta name="yandex-verification" content="YANDEX_VERIFICATION_CODE">
+  <meta property="fb:app_id" content="FACEBOOK_APP_ID">
+  <meta property="fb:admins" content="FACEBOOK_ADMIN_ID">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://sujoy.in/">
+
+  <!-- Alternate Languages 
+  <link rel="alternate" hreflang="en" href="https://example.com/en/">
+  <link rel="alternate" hreflang="fr" href="https://example.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://example.com/"> -->
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html,body{
+
+    width:100%;
+    height:100%;
+
+    margin:0;
+    padding:0;
+
+    overflow:hidden;
+
+}
+
+
+body{
+
+    width:100%;
+    height:100dvh;
+    min-height:100svh;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    /*background:
+    linear-gradient(
+        135deg,
+        #102542,
+        #1d3557,
+        #3a506b
+    );*/
+
+background: #000428;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    font-family:'Cinzel',serif;
+
+}
+
+
+
+/* Rain */
+
+canvas{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100dvh;
+
+    display:block;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/* Glow */
+
+
+.glow1,
+.glow2{
+
+    position:fixed;
+
+    width:30vmax;
+    height:30vmax;
+
+    max-width:300px;
+    max-height:300px;
+
+    border-radius:50%;
+
+    filter:blur(60px);
+
+    opacity:.45;
+
+    pointer-events:none;
+
+    animation:float 14s ease-in-out infinite alternate;
+
+}
+
+
+
+.glow1{
+
+    /*background:#4cc9f0;*/
+    background: yellow;
+
+    top:-10vmax;
+    left:-10vmax;
+
+}
+
+
+
+.glow2{
+
+    /*background:#ffb703;*/
+    background: red;
+
+    bottom:-10vmax;
+    right:-10vmax;
+
+    animation-duration:18s;
+
+}
+
+
+
+
+@keyframes float{
+
+
+from{
+
+transform:translate(-30px,-20px);
+
+}
+
+
+to{
+
+transform:translate(30px,20px);
+
+}
+
+
+}
+
+
+
+
+
+
+/* Name */
+
+
+.name{
+
+    position:fixed;
+
+
+    left:50%;
+    top:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    max-width:90vw;
+
+
+    font-size:
+    clamp(30px,9vw,72px);
+
+
+    letter-spacing:
+    clamp(2px,1vw,8px);
+
+
+    font-weight:700;
+
+
+    color:white;
+
+
+    white-space:nowrap;
+
+
+    text-align:center;
+
+
+    z-index:2;
+
+
+
+    text-shadow:
+
+    0 0 8px #6ee7ff,
+    0 0 18px #6ee7ff,
+    0 0 35px rgba(110,231,255,.8);
+
+
+
+    animation:shine 3s ease-in-out infinite alternate;
+
+}
+
+
+
+@keyframes shine{
+
+
+0%{
+
+filter:hue-rotate(0deg);
+
+transform:
+translate(-50%,-50%)
+scale(1);
+
+}
+
+
+
+100%{
+
+filter:hue-rotate(30deg);
+
+transform:
+translate(-50%,-50%)
+scale(1.05);
+
+}
+
+
+}
+
+
+
+
+
+
+/* Ripple */
+
+
+.ripple{
+
+
+position:fixed;
+
+
+border:
+2px solid rgba(255,255,255,.5);
+
+
+border-radius:50%;
+
+
+pointer-events:none;
+
+
+animation:ripple .8s linear forwards;
+
+
+z-index:3;
+
+
+}
+
+
+
+
+@keyframes ripple{
+
+
+0%{
+
+width:8px;
+
+height:8px;
+
+opacity:1;
+
+}
+
+
+
+100%{
+
+
+width:90px;
+
+height:90px;
+
+
+margin-left:-41px;
+
+margin-top:-41px;
+
+
+opacity:0;
+
+
+}
+
+}
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="glow1"></div>
+
+<div class="glow2"></div>
+
+
+<canvas id="rain"></canvas>
+
+
+<div class="name">
+SUJOY
+</div>
+
+
+
+
+<script>
+
+
+const canvas=document.getElementById("rain");
+
+const ctx=canvas.getContext("2d");
+
+
+
+function resize(){
+
+
+canvas.width =
+window.innerWidth * devicePixelRatio;
+
+
+canvas.height =
+window.innerHeight * devicePixelRatio;
+
+
+ctx.setTransform(
+devicePixelRatio,
+0,
+0,
+devicePixelRatio,
+0,
+0
+);
+
+
+}
+
+
+resize();
+
+
+window.addEventListener(
+"resize",
+resize
+);
+
+
+
+if(window.visualViewport){
+
+window.visualViewport.addEventListener(
+"resize",
+resize
+);
+
+}
+
+
+
+
+// Rain
+
+
+let rain=[];
+
+
+
+function createRain(){
+
+
+rain=[];
+
+
+let amount =
+Math.floor(
+(window.innerWidth *
+window.innerHeight)
+/7000
+);
+
+
+
+amount =
+Math.max(
+100,
+Math.min(amount,350)
+);
+
+
+
+for(let i=0;i<amount;i++){
+
+
+rain.push({
+
+x:Math.random()*window.innerWidth,
+
+y:Math.random()*window.innerHeight,
+
+l:10+Math.random()*20,
+
+s:3+Math.random()*5
+
+});
+
+
+}
+
+
+}
+
+
+
+createRain();
+
+
+window.addEventListener(
+"resize",
+createRain
+);
+
+
+
+
+
+
+function animate(){
+
+
+ctx.clearRect(
+0,
+0,
+window.innerWidth,
+window.innerHeight
+);
+
+
+
+ctx.strokeStyle=
+"rgba(255,255,255,.25)";
+
+
+ctx.lineWidth=1;
+
+
+
+rain.forEach(r=>{
+
+
+ctx.beginPath();
+
+
+ctx.moveTo(
+r.x,
+r.y
+);
+
+
+ctx.lineTo(
+r.x,
+r.y+r.l
+);
+
+
+ctx.stroke();
+
+
+
+r.y += r.s;
+
+r.x -=0.4;
+
+
+
+if(r.y > window.innerHeight){
+
+
+r.y=-20;
+
+r.x=Math.random()*window.innerWidth;
+
+
+}
+
+
+
+});
+
+
+
+requestAnimationFrame(animate);
+
+
+}
+
+
+
+animate();
+
+
+
+
+
+
+// Ripple optimized
+
+
+function ripple(x,y){
+
+
+let r=document.createElement("div");
+
+
+r.className="ripple";
+
+
+r.style.left=x+"px";
+
+r.style.top=y+"px";
+
+
+document.body.appendChild(r);
+
+
+
+setTimeout(()=>{
+
+r.remove();
+
+},800);
+
+
+}
+
+
+
+
+let lastRipple=0;
+
+
+
+document.addEventListener(
+"mousemove",
+e=>{
+
+let now=Date.now();
+
+if(now-lastRipple<80)return;
+
+lastRipple=now;
+
+
+ripple(
+e.clientX,
+e.clientY
+);
+
+
+});
+
+
+
+
+
+document.addEventListener(
+"touchmove",
+e=>{
+
+
+let now=Date.now();
+
+if(now-lastRipple<80)return;
+
+lastRipple=now;
+
+
+let t=e.touches[0];
+
+
+ripple(
+t.clientX,
+t.clientY
+);
+
+
+},
+{passive:true}
+);
+
+
+
+</script>
+
+
+</body>
+</html>
