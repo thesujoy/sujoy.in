@@ -1,0 +1,4649 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#020617;
+color:white;
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+
+}
+
+/*------------------------
+Animated Background
+-------------------------*/
+
+body::before{
+
+content:"";
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:
+
+radial-gradient(circle,#ffffff 1px,transparent 1px),
+radial-gradient(circle,#9ddcff 1px,transparent 1px),
+radial-gradient(circle,#fff 1px,transparent 1px);
+
+background-size:
+120px 120px,
+180px 180px,
+260px 260px;
+
+animation:starsMove 100s linear infinite;
+
+opacity:.35;
+
+z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-800px);
+}
+
+}
+
+/*----------------------*/
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.12);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-family:"Special Elite",monospace;
+
+font-size:28px;
+
+color:#7dd3fc;
+
+letter-spacing:2px;
+
+}
+
+/*----------------------*/
+
+nav ul{
+
+display:flex;
+
+list-style:none;
+
+gap:35px;
+
+align-items:center;
+
+}
+
+nav li{
+
+position:relative;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:15px;
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:#7dd3fc;
+
+}
+
+/*----------------------*/
+
+.dropdown{
+
+display:none;
+
+position:absolute;
+
+top:38px;
+
+left:0;
+
+background:#0f172a;
+
+border-radius:10px;
+
+min-width:210px;
+
+overflow:hidden;
+
+box-shadow:0 10px 35px rgba(0,0,0,.45);
+
+}
+
+.dropdown a{
+
+display:block;
+
+padding:14px 20px;
+
+}
+
+.dropdown a:hover{
+
+background:#1e293b;
+
+}
+
+nav li:hover .dropdown{
+
+display:block;
+
+}
+
+/*----------------------*/
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 10%;
+
+position:relative;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+font-family:"Special Elite",monospace;
+
+margin-bottom:25px;
+
+color:#7dd3fc;
+
+animation:typewriter 4s steps(26);
+
+overflow:hidden;
+
+white-space:nowrap;
+
+border-right:3px solid white;
+
+width:fit-content;
+
+margin-inline:auto;
+
+}
+
+@keyframes typewriter{
+
+from{
+
+width:0;
+
+}
+
+to{
+
+width:100%;
+
+}
+
+}
+
+.hero p{
+
+font-size:22px;
+
+line-height:1.8;
+
+opacity:.88;
+
+margin-top:25px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:15px 36px;
+
+background:#38bdf8;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 25px #38bdf8;
+
+}
+
+/*----------------------*/
+
+.planet{
+
+position:absolute;
+
+right:10%;
+
+top:22%;
+
+width:160px;
+
+height:160px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle at 30% 30%,
+
+#ffffff,
+
+#7dd3fc,
+
+#1e3a8a);
+
+box-shadow:
+
+0 0 40px #38bdf8,
+
+0 0 100px rgba(56,189,248,.4);
+
+animation:floatPlanet 5s ease-in-out infinite;
+
+}
+
+@keyframes floatPlanet{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*----------------------*/
+
+.scroll{
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:14px;
+
+opacity:.8;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:translate(-50%,10px);
+
+}
+
+}
+
+/*----------------------*/
+
+section{
+
+padding:120px 8%;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:18px;
+
+padding:35px;
+
+backdrop-filter:blur(12px);
+
+}
+
+.card h2{
+
+font-family:"Special Elite";
+
+margin-bottom:20px;
+
+color:#7dd3fc;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+/*----------------------*/
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+opacity:.7;
+
+}
+
+/*----------------------*/
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:46px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+nav ul{
+
+gap:18px;
+
+font-size:14px;
+
+}
+
+.logo{
+
+font-size:22px;
+
+}
+
+.planet{
+
+display:none;
+
+}
+
+}
+
+/* ======================================= */
+
+.formulaBox{
+
+display:flex;
+justify-content:center;
+margin:30px 0;
+
+}
+
+.formula{
+
+font-size:60px;
+font-family:"Special Elite",monospace;
+color:#7dd3fc;
+
+animation:pulseFormula 2s infinite;
+
+}
+
+@keyframes pulseFormula{
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+.formulaTable{
+
+width:100%;
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+.formulaTable th,
+.formulaTable td{
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:14px;
+
+text-align:left;
+
+}
+
+.formulaTable th{
+
+background:#0f172a;
+
+}
+
+.clockArea{
+
+display:flex;
+
+justify-content:space-evenly;
+
+margin-top:40px;
+
+flex-wrap:wrap;
+
+gap:40px;
+
+}
+
+.clock{
+
+width:170px;
+
+height:170px;
+
+border:6px solid #7dd3fc;
+
+border-radius:50%;
+
+position:relative;
+
+background:#06101f;
+
+}
+
+.hand{
+
+position:absolute;
+
+left:50%;
+
+bottom:50%;
+
+width:4px;
+
+height:65px;
+
+background:white;
+
+transform-origin:bottom;
+
+animation:earthClock 6s linear infinite;
+
+}
+
+.ship{
+
+animation:shipClock 12s linear infinite;
+
+background:#38bdf8;
+
+}
+
+@keyframes earthClock{
+
+from{
+
+transform:translateX(-50%) rotate(0deg);
+
+}
+
+to{
+
+transform:translateX(-50%) rotate(360deg);
+
+}
+
+}
+
+@keyframes shipClock{
+
+from{
+
+transform:translateX(-50%) rotate(0deg);
+
+}
+
+to{
+
+transform:translateX(-50%) rotate(360deg);
+
+}
+
+}
+
+.factBox{
+
+margin-top:25px;
+
+padding:25px;
+
+border-left:5px solid #38bdf8;
+
+background:rgba(56,189,248,.12);
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+/* ======================================================
+   FILE 2.2B : SPACESHIP DEMO STYLES
+====================================================== */
+
+#spaceship-demo .card{
+    overflow:hidden;
+}
+
+/* -------------------------
+   Speed Panel
+-------------------------- */
+
+.speedPanel{
+    margin-top:25px;
+}
+
+.speedLabel{
+    font-size:20px;
+    margin-bottom:18px;
+    color:#7dd3fc;
+    font-weight:600;
+}
+
+#speedValue{
+    color:#38bdf8;
+    font-size:28px;
+    font-weight:bold;
+    font-family:"Special Elite", monospace;
+}
+
+#speedSlider{
+    width:100%;
+    cursor:pointer;
+}
+
+/* -------------------------
+   Space Scene
+-------------------------- */
+
+.spaceScene{
+
+    position:relative;
+
+    width:100%;
+
+    height:340px;
+
+    margin-top:20px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#112244,#020617 70%);
+
+    border:1px solid rgba(255,255,255,.1);
+
+}
+
+/* -------------------------
+   Stars
+-------------------------- */
+
+.stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(#7dd3fc 1px,transparent 1px),
+    radial-gradient(#ffffff 2px,transparent 2px);
+
+    background-size:
+    80px 80px,
+    150px 150px,
+    220px 220px;
+
+    animation:moveStars 18s linear infinite;
+
+    opacity:.75;
+
+}
+
+@keyframes moveStars{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(-400px);
+
+}
+
+}
+
+/* -------------------------
+   Planet
+-------------------------- */
+
+.planetLeft{
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    left:40px;
+
+    bottom:40px;
+
+    background:
+
+    radial-gradient(circle at 35% 35%,
+
+    #ffffff,
+
+    #7dd3fc,
+
+    #2563eb);
+
+    box-shadow:
+
+    0 0 30px #38bdf8,
+
+    0 0 80px rgba(56,189,248,.45);
+
+    animation:planetFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes planetFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* -------------------------
+   Spaceship
+-------------------------- */
+
+#spaceship{
+
+    position:absolute;
+
+    left:260px;
+
+    top:130px;
+
+    width:170px;
+
+    height:70px;
+
+    border-radius:60px;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #dbeafe,
+
+    white,
+
+    #dbeafe);
+
+    box-shadow:
+
+    0 0 25px rgba(255,255,255,.4);
+
+    animation:shipFloat 3s ease-in-out infinite;
+
+}
+
+/* nose */
+
+#spaceship::before{
+
+content:"";
+
+position:absolute;
+
+right:-30px;
+
+top:0;
+
+width:0;
+
+height:0;
+
+border-top:35px solid transparent;
+
+border-bottom:35px solid transparent;
+
+border-left:30px solid white;
+
+}
+
+/* tail */
+
+#spaceship::after{
+
+content:"";
+
+position:absolute;
+
+left:-18px;
+
+top:16px;
+
+width:20px;
+
+height:38px;
+
+background:#cbd5e1;
+
+border-radius:4px;
+
+}
+
+/* -------------------------
+   Window
+-------------------------- */
+
+.window{
+
+position:absolute;
+
+width:28px;
+
+height:28px;
+
+border-radius:50%;
+
+background:#38bdf8;
+
+left:55px;
+
+top:20px;
+
+box-shadow:
+
+0 0 18px #38bdf8;
+
+}
+
+/* -------------------------
+   Wings
+-------------------------- */
+
+.wing{
+
+position:absolute;
+
+width:38px;
+
+height:12px;
+
+background:#cbd5e1;
+
+}
+
+.leftWing{
+
+left:58px;
+
+top:-6px;
+
+transform:rotate(-20deg);
+
+}
+
+.rightWing{
+
+left:58px;
+
+bottom:-6px;
+
+transform:rotate(20deg);
+
+}
+
+/* -------------------------
+   Engine Flame
+-------------------------- */
+
+.flame{
+
+position:absolute;
+
+left:-28px;
+
+top:20px;
+
+width:30px;
+
+height:24px;
+
+border-radius:50%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+orange,
+
+yellow,
+
+transparent);
+
+filter:blur(2px);
+
+animation:engineFire .25s infinite alternate;
+
+}
+
+@keyframes engineFire{
+
+from{
+
+transform:scaleX(.8);
+
+opacity:.7;
+
+}
+
+to{
+
+transform:scaleX(1.25);
+
+opacity:1;
+
+}
+
+}
+
+/* -------------------------
+   Floating Ship
+-------------------------- */
+
+@keyframes shipFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* -------------------------
+   Info Cards
+-------------------------- */
+
+.infoGrid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+}
+
+.infoCard{
+
+padding:22px;
+
+border-radius:18px;
+
+background:
+
+rgba(255,255,255,.05);
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.infoCard:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+
+0 12px 30px rgba(0,0,0,.35);
+
+}
+
+.infoCard h3{
+
+margin-bottom:12px;
+
+color:#7dd3fc;
+
+font-family:"Special Elite", monospace;
+
+}
+
+.infoCard p{
+
+line-height:1.7;
+
+}
+
+/* -------------------------
+   Progress Bar
+-------------------------- */
+
+.progressBar{
+
+height:20px;
+
+margin-top:15px;
+
+background:#0f172a;
+
+border-radius:40px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.progressFill{
+
+width:10%;
+
+height:100%;
+
+border-radius:40px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#38bdf8,
+
+#7dd3fc);
+
+transition:.5s;
+
+}
+
+#distanceText{
+
+margin-top:12px;
+
+font-size:18px;
+
+color:#cbd5e1;
+
+}
+
+/* -------------------------
+   Responsive
+-------------------------- */
+
+@media(max-width:900px){
+
+#spaceship{
+
+left:120px;
+
+transform:scale(.85);
+
+}
+
+.planetLeft{
+
+width:90px;
+
+height:90px;
+
+left:15px;
+
+bottom:20px;
+
+}
+
+.spaceScene{
+
+height:280px;
+
+}
+
+.speedLabel{
+
+font-size:18px;
+
+}
+
+}
+
+/* ======================================================
+   FILE 2.3B : TIME DILATION CALCULATOR STYLES
+====================================================== */
+
+#time-calculator .card{
+    overflow:hidden;
+}
+
+/* ===========================
+   Calculator Layout
+=========================== */
+
+.calculatorGrid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:35px;
+
+margin-top:30px;
+
+}
+
+/* ===========================
+   Panels
+=========================== */
+
+.calcPanel,
+.resultPanel{
+
+background:rgba(255,255,255,.05);
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(12px);
+
+transition:.35s;
+
+}
+
+.calcPanel:hover,
+.resultPanel:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.30);
+
+}
+
+.calcPanel h3,
+.resultPanel h3{
+
+font-family:"Special Elite", monospace;
+
+color:#7dd3fc;
+
+margin-bottom:10px;
+
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.calcPanel label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#dbeafe;
+
+}
+
+.speedDisplay{
+
+font-size:20px;
+
+margin-bottom:15px;
+
+color:#7dd3fc;
+
+}
+
+#calcSpeedValue{
+
+font-size:30px;
+
+font-family:"Special Elite", monospace;
+
+font-weight:bold;
+
+color:#38bdf8;
+
+}
+
+#travelSpeed{
+
+width:100%;
+
+cursor:pointer;
+
+margin-bottom:10px;
+
+}
+
+#earthYears{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:#0f172a;
+
+color:white;
+
+font-size:18px;
+
+margin-top:8px;
+
+}
+
+#calculateTime{
+
+margin-top:20px;
+
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+#0ea5e9);
+
+color:white;
+
+transition:.35s;
+
+}
+
+#calculateTime:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 25px rgba(56,189,248,.5);
+
+}
+
+/* ===========================
+   Result Cards
+=========================== */
+
+.resultCard{
+
+background:rgba(255,255,255,.04);
+
+padding:22px;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.resultCard:hover{
+
+transform:scale(1.02);
+
+}
+
+.resultCard h4{
+
+margin-bottom:12px;
+
+color:#7dd3fc;
+
+}
+
+.bigNumber{
+
+font-size:42px;
+
+font-weight:bold;
+
+font-family:"Special Elite", monospace;
+
+color:#38bdf8;
+
+margin-bottom:10px;
+
+animation:pulseNumber 2s infinite;
+
+}
+
+@keyframes pulseNumber{
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+
+/* ===========================
+   Formula Section
+=========================== */
+
+.formulaSection{
+
+margin-top:25px;
+
+padding:30px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.formulaSection h3{
+
+font-family:"Special Elite", monospace;
+
+color:#7dd3fc;
+
+}
+
+.formulaLarge{
+
+text-align:center;
+
+font-size:56px;
+
+margin:25px 0;
+
+font-family:"Special Elite", monospace;
+
+color:#7dd3fc;
+
+}
+
+.formulaList{
+
+margin-top:20px;
+
+padding-left:25px;
+
+line-height:2;
+
+}
+
+/* ===========================
+   Comparison Grid
+=========================== */
+
+.comparisonGrid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+}
+
+.compareCard{
+
+padding:25px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.compareCard:hover{
+
+transform:translateY(-6px);
+
+}
+
+.compareCard h3{
+
+font-family:"Special Elite", monospace;
+
+color:#7dd3fc;
+
+margin-bottom:15px;
+
+}
+
+#gammaOutput,
+#differenceOutput{
+
+font-size:36px;
+
+font-family:"Special Elite", monospace;
+
+font-weight:bold;
+
+color:#38bdf8;
+
+}
+
+#calculatorMessage{
+
+line-height:1.8;
+
+}
+
+/* ===========================
+   Twin Paradox Banner
+=========================== */
+
+.factBanner{
+
+margin-top:35px;
+
+padding:28px;
+
+border-left:5px solid #38bdf8;
+
+background:rgba(56,189,248,.12);
+
+border-radius:12px;
+
+font-size:18px;
+
+line-height:1.9;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.calculatorGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.bigNumber{
+
+font-size:34px;
+
+}
+
+.formulaLarge{
+
+font-size:40px;
+
+}
+
+#gammaOutput,
+#differenceOutput{
+
+font-size:28px;
+
+}
+
+.factBanner{
+
+font-size:16px;
+
+}
+
+}
+
+/* ===============================
+Twin Paradox
+=============================== */
+
+.twinSection{
+
+margin-top:50px;
+
+}
+
+.twinSection h3{
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+margin-bottom:20px;
+
+}
+
+.twinGrid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+margin-top:30px;
+
+}
+
+.twinCard{
+
+padding:25px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.twinCard:hover{
+
+transform:translateY(-8px);
+
+}
+
+.emoji{
+
+font-size:60px;
+
+margin-bottom:15px;
+
+}
+
+.ageNumber{
+
+font-size:52px;
+
+font-family:"Special Elite",monospace;
+
+color:#38bdf8;
+
+margin:20px 0;
+
+}
+
+.ageBar{
+
+height:18px;
+
+background:#0f172a;
+
+border-radius:50px;
+
+overflow:hidden;
+
+}
+
+.ageFill{
+
+height:100%;
+
+width:0;
+
+transition:1s;
+
+}
+
+.earthFill{
+
+background:#22c55e;
+
+}
+
+.shipFill{
+
+background:#38bdf8;
+
+}
+
+/* ==========================================
+Timeline
+========================================== */
+
+.timelineSection{
+
+margin-top:60px;
+
+}
+
+.timelineSection h3{
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+margin-bottom:20px;
+
+}
+
+.timeline{
+
+margin-top:25px;
+
+}
+
+.timelineTrack{
+
+height:24px;
+
+background:#0f172a;
+
+border-radius:50px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.timelineFill{
+
+height:100%;
+
+width:0;
+
+transition:1s;
+
+}
+
+.earthTimeline{
+
+background:linear-gradient(
+90deg,
+#22c55e,
+#4ade80);
+
+}
+
+.shipTimeline{
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+#60a5fa);
+
+}
+
+.timelineLabel{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-top:10px;
+
+font-size:18px;
+
+}
+
+.timelineLabel span{
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+}
+
+.timelineNote{
+
+margin-top:35px;
+
+padding:20px;
+
+border-left:5px solid #38bdf8;
+
+background:rgba(56,189,248,.10);
+
+line-height:1.8;
+
+border-radius:10px;
+
+}
+
+/* =====================================================
+FILE 2.3C-3B-1
+Warp Speed Background
+===================================================== */
+
+.warpContainer{
+
+position:relative;
+
+margin-top:60px;
+
+height:240px;
+
+overflow:hidden;
+
+border-radius:22px;
+
+background:
+
+radial-gradient(circle at center,
+
+#09111f,
+
+#030712);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ------------------------- */
+
+#spaceGlow{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:120px;
+
+height:120px;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+background:#38bdf8;
+
+filter:blur(45px);
+
+opacity:.25;
+
+transition:.5s;
+
+}
+
+/* ------------------------- */
+
+.warpStars{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+}
+
+/* ------------------------- */
+
+.warpStars span{
+
+position:absolute;
+
+display:block;
+
+width:140px;
+
+height:2px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+white,
+
+transparent);
+
+opacity:.25;
+
+left:-180px;
+
+animation:
+
+warpMove 5s linear infinite;
+
+}
+
+/* Random positions */
+
+.warpStars span:nth-child(1){
+
+top:18px;
+
+animation-delay:0s;
+
+}
+
+.warpStars span:nth-child(2){
+
+top:38px;
+
+animation-delay:.5s;
+
+}
+
+.warpStars span:nth-child(3){
+
+top:58px;
+
+animation-delay:1s;
+
+}
+
+.warpStars span:nth-child(4){
+
+top:78px;
+
+animation-delay:1.4s;
+
+}
+
+.warpStars span:nth-child(5){
+
+top:98px;
+
+animation-delay:2s;
+
+}
+
+.warpStars span:nth-child(6){
+
+top:118px;
+
+animation-delay:2.5s;
+
+}
+
+.warpStars span:nth-child(7){
+
+top:138px;
+
+animation-delay:3s;
+
+}
+
+.warpStars span:nth-child(8){
+
+top:158px;
+
+animation-delay:3.5s;
+
+}
+
+.warpStars span:nth-child(9){
+
+top:178px;
+
+animation-delay:4s;
+
+}
+
+.warpStars span:nth-child(10){
+
+top:198px;
+
+animation-delay:4.5s;
+
+}
+
+.warpStars span:nth-child(11){
+
+top:30px;
+
+animation-delay:.8s;
+
+}
+
+.warpStars span:nth-child(12){
+
+top:90px;
+
+animation-delay:1.8s;
+
+}
+
+.warpStars span:nth-child(13){
+
+top:150px;
+
+animation-delay:2.8s;
+
+}
+
+.warpStars span:nth-child(14){
+
+top:210px;
+
+animation-delay:3.8s;
+
+}
+
+.warpStars span:nth-child(15){
+
+top:120px;
+
+animation-delay:4.8s;
+
+}
+
+/* ------------------------- */
+
+@keyframes warpMove{
+
+0%{
+
+transform:translateX(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.35;
+
+}
+
+100%{
+
+transform:translateX(1700px);
+
+opacity:0;
+
+}
+
+}
+
+/* ------------------------- */
+
+.warpLabel{
+
+position:absolute;
+
+left:50%;
+
+bottom:18px;
+
+transform:translateX(-50%);
+
+font-family:"Special Elite",monospace;
+
+font-size:18px;
+
+color:#7dd3fc;
+
+letter-spacing:1px;
+
+text-shadow:
+
+0 0 10px #38bdf8;
+
+}
+
+/* ------------------------- */
+
+.warpContainer:hover{
+
+box-shadow:
+
+0 0 40px rgba(56,189,248,.25);
+
+}
+
+/* ------------------------- */
+
+@media(max-width:768px){
+
+.warpContainer{
+
+height:180px;
+
+}
+
+.warpLabel{
+
+font-size:15px;
+
+}
+
+}
+
+/* ==========================================
+HYPERSPACE MODE
+========================================== */
+
+.hyperBadge{
+
+position:absolute;
+
+top:18px;
+
+left:50%;
+
+transform:translateX(-50%) scale(.8);
+
+padding:12px 28px;
+
+border-radius:50px;
+
+font-family:"Special Elite",monospace;
+
+font-size:18px;
+
+letter-spacing:2px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#38bdf8,
+#7dd3fc);
+
+color:white;
+
+opacity:0;
+
+transition:.5s;
+
+box-shadow:
+
+0 0 20px rgba(56,189,248,.5);
+
+z-index:5;
+
+}
+
+.hyperBadge.active{
+
+opacity:1;
+
+transform:translateX(-50%) scale(1);
+
+animation:hyperPulse 1.2s infinite;
+
+}
+
+@keyframes hyperPulse{
+
+0%{
+
+box-shadow:
+0 0 10px rgba(56,189,248,.5);
+
+}
+
+50%{
+
+box-shadow:
+0 0 35px rgba(56,189,248,.9);
+
+}
+
+100%{
+
+box-shadow:
+0 0 10px rgba(56,189,248,.5);
+
+}
+
+}
+
+.warpContainer.hyperMode{
+
+border-color:#38bdf8;
+
+box-shadow:
+
+0 0 45px rgba(56,189,248,.6);
+
+}
+
+/* =====================================================
+FILE 2.3C-3B-2b-2
+Camera Shake Effect
+===================================================== */
+
+.warpContainer{
+
+transition:
+transform .08s linear,
+box-shadow .3s,
+background .5s;
+
+will-change:transform;
+
+}
+
+/* Optional stronger mode */
+
+.hyperMode{
+
+overflow:hidden;
+
+}
+
+/* =====================================================
+FILE 2.3C-3B-2b-3
+Engine Particle System
+===================================================== */
+
+#engineParticles{
+
+position:absolute;
+
+left:-12px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+width:1px;
+
+height:1px;
+
+pointer-events:none;
+
+overflow:visible;
+
+}
+
+.engineParticle{
+
+position:absolute;
+
+border-radius:50%;
+
+background:#7dd3fc;
+
+box-shadow:
+
+0 0 8px #38bdf8,
+
+0 0 18px #7dd3fc;
+
+will-change:
+
+transform,
+
+opacity;
+
+}
+
+/* =====================================================
+FILE 2.3C-3B-2b-4
+Dynamic Star Streaks
+===================================================== */
+
+#dynamicStars{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.dynamicStar{
+
+position:absolute;
+
+left:-250px;
+
+border-radius:999px;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.95),
+transparent);
+
+transform-origin:left center;
+
+will-change:
+transform,
+opacity;
+
+}
+
+/* =====================================================
+FILE 2.3C-3B-2b-5
+Adaptive Warp Colors
+===================================================== */
+
+:root{
+
+--warpPrimary:#38bdf8;
+--warpSecondary:#7dd3fc;
+--warpGlow:#38bdf8;
+--warpShadow:rgba(56,189,248,.35);
+
+}
+
+.warpContainer{
+
+transition:
+
+background .5s,
+box-shadow .5s,
+border-color .5s;
+
+}
+
+#spaceGlow{
+
+transition:
+
+background .4s,
+filter .4s,
+opacity .4s;
+
+}
+
+.dynamicStar{
+
+transition:
+
+background .3s;
+
+}
+
+.engineParticle{
+
+transition:
+
+background .25s,
+box-shadow .25s;
+
+}
+
+/* =====================================================
+PART 3.1
+GENERAL RELATIVITY
+===================================================== */
+
+#generalRelativity{
+
+margin-top:120px;
+
+}
+
+.chapterTag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+background:#0f172a;
+
+border:1px solid rgba(255,255,255,.08);
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+margin-bottom:25px;
+
+letter-spacing:2px;
+
+}
+
+.sectionTitle{
+
+font-size:46px;
+
+margin-bottom:20px;
+
+}
+
+.leadText{
+
+font-size:20px;
+
+line-height:2;
+
+color:#dbeafe;
+
+max-width:900px;
+
+}
+
+.einsteinQuote{
+
+margin:45px 0;
+
+padding:35px;
+
+background:rgba(255,255,255,.05);
+
+border-left:5px solid #38bdf8;
+
+border-radius:18px;
+
+}
+
+.einsteinQuote blockquote{
+
+font-size:34px;
+
+font-family:"Special Elite",monospace;
+
+margin-bottom:15px;
+
+color:#7dd3fc;
+
+}
+
+.gravityGrid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.gravityCard{
+
+padding:30px;
+
+background:rgba(255,255,255,.05);
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.gravityCard:hover{
+
+transform:translateY(-8px);
+
+}
+
+.gravityIcon{
+
+font-size:52px;
+
+margin-bottom:20px;
+
+}
+
+.ideaBox{
+
+margin-top:60px;
+
+padding:35px;
+
+border-radius:18px;
+
+background:rgba(56,189,248,.08);
+
+line-height:2;
+
+}
+
+.factGrid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:60px;
+
+}
+
+.factCard{
+
+padding:25px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.04);
+
+transition:.35s;
+
+}
+
+.factCard:hover{
+
+transform:scale(1.03);
+
+}
+
+.transitionBox{
+
+margin-top:60px;
+
+padding:30px;
+
+text-align:center;
+
+font-size:22px;
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/* =====================================================
+PART 3.2B
+INTERACTIVE SPACETIME FABRIC
+===================================================== */
+
+#spacetimeFabric{
+
+margin-top:120px;
+
+}
+
+/* ===========================
+Layout
+=========================== */
+
+.fabricLayout{
+
+display:grid;
+
+grid-template-columns:
+2.2fr 1fr;
+
+gap:35px;
+
+margin-top:45px;
+
+align-items:start;
+
+}
+
+/* ===========================
+Canvas Panel
+=========================== */
+
+.fabricCanvasPanel{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:22px;
+
+overflow:hidden;
+
+backdrop-filter:blur(12px);
+
+}
+
+/* ===========================
+Toolbar
+=========================== */
+
+.canvasToolbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 24px;
+
+background:rgba(255,255,255,.03);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+font-family:"Special Elite",monospace;
+
+}
+
+.statusDot{
+
+display:inline-block;
+
+width:10px;
+
+height:10px;
+
+border-radius:50%;
+
+background:#22c55e;
+
+margin-right:10px;
+
+box-shadow:
+
+0 0 12px #22c55e;
+
+animation:statusPulse 1.8s infinite;
+
+}
+
+@keyframes statusPulse{
+
+50%{
+
+transform:scale(1.4);
+
+opacity:.6;
+
+}
+
+}
+
+/* ===========================
+Canvas
+=========================== */
+
+#fabricCanvas{
+
+display:block;
+
+width:100%;
+
+height:auto;
+
+background:
+
+radial-gradient(
+
+circle at center,
+
+#08111d,
+
+#020617
+
+);
+
+cursor:grab;
+
+}
+
+#fabricCanvas:active{
+
+cursor:grabbing;
+
+}
+
+.canvasHint{
+
+padding:18px;
+
+text-align:center;
+
+background:rgba(255,255,255,.03);
+
+color:#7dd3fc;
+
+font-size:15px;
+
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.fabricSidebar{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+/* ===========================
+Cards
+=========================== */
+
+.controlCard{
+
+background:rgba(255,255,255,.05);
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+backdrop-filter:blur(12px);
+
+}
+
+.controlCard:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.controlCard h3{
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+margin-bottom:20px;
+
+}
+
+/* ===========================
+Inputs
+=========================== */
+
+.controlCard label{
+
+display:block;
+
+margin-bottom:10px;
+
+font-weight:600;
+
+}
+
+.controlCard input[type=range]{
+
+width:100%;
+
+margin-bottom:8px;
+
+cursor:pointer;
+
+}
+
+.sliderValue{
+
+text-align:right;
+
+margin-bottom:20px;
+
+font-size:16px;
+
+color:#7dd3fc;
+
+font-family:"Special Elite",monospace;
+
+}
+
+#resetFabric{
+
+width:100%;
+
+margin-top:15px;
+
+padding:14px;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:bold;
+
+color:white;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#2563eb,
+
+#38bdf8
+
+);
+
+transition:.3s;
+
+}
+
+#resetFabric:hover{
+
+transform:translateY(-2px);
+
+box-shadow:
+
+0 0 22px rgba(56,189,248,.45);
+
+}
+
+/* ===========================
+Information
+=========================== */
+
+.infoItem{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:12px 0;
+
+border-bottom:
+
+1px solid rgba(255,255,255,.06);
+
+}
+
+.infoItem:last-child{
+
+border-bottom:none;
+
+}
+
+.infoItem span{
+
+font-family:"Special Elite",monospace;
+
+color:#7dd3fc;
+
+}
+
+/* ===========================
+Legend
+=========================== */
+
+.legendGrid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+margin-top:45px;
+
+}
+
+.legendCard{
+
+padding:22px;
+
+text-align:center;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+transition:.35s;
+
+line-height:1.8;
+
+}
+
+.legendCard:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* ===========================
+FPS Counter
+=========================== */
+
+#fpsCounter{
+
+color:#7dd3fc;
+
+font-size:15px;
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1050px){
+
+.fabricLayout{
+
+grid-template-columns:1fr;
+
+}
+
+.fabricSidebar{
+
+order:2;
+
+}
+
+.fabricCanvasPanel{
+
+order:1;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.canvasToolbar{
+
+flex-direction:column;
+
+gap:10px;
+
+text-align:center;
+
+}
+
+.legendGrid{
+
+grid-template-columns:1fr;
+
+}
+
+.controlCard{
+
+padding:20px;
+
+}
+
+}
+
+/* =====================================================
+PART 3.2C-7
+Advanced Controls
+===================================================== */
+
+.toggleGroup{
+
+margin-top:20px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.toggleGroup label{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+cursor:pointer;
+
+font-size:15px;
+
+}
+
+.toggleGroup input[type="checkbox"]{
+
+width:18px;
+
+height:18px;
+
+accent-color:#38bdf8;
+
+cursor:pointer;
+
+}
+
+/* ==========================================
+Live Information Panel
+========================================== */
+
+.infoExplanation{
+
+margin-top:18px;
+
+padding:15px;
+
+border-radius:12px;
+
+background:rgba(56,189,248,.08);
+
+line-height:1.7;
+
+font-size:15px;
+
+color:#dbeafe;
+
+transition:.35s;
+
+}
+
+/* =====================================================
+PART 3.2C-10A
+TOUCH CONTROLS AND STATUS MESSAGES
+===================================================== */
+
+.simulationState,
+.toolbarStats{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.toolbarStats{
+
+gap:18px;
+
+}
+
+#interactionStatus{
+
+color:#cbd5e1;
+
+font-size:14px;
+
+}
+
+.fabricMessage{
+
+padding:13px 20px;
+
+text-align:center;
+
+background:rgba(56,189,248,.07);
+
+border-top:1px solid rgba(255,255,255,.06);
+
+color:#bae6fd;
+
+font-size:14px;
+
+line-height:1.6;
+
+transition:
+
+background .3s,
+
+color .3s;
+
+}
+
+.fabricMessage.active{
+
+background:rgba(34,197,94,.10);
+
+color:#bbf7d0;
+
+}
+
+.fabricMessage.warning{
+
+background:rgba(251,191,36,.10);
+
+color:#fde68a;
+
+}
+
+.fabricMessage.paused{
+
+background:rgba(148,163,184,.10);
+
+color:#cbd5e1;
+
+}
+
+.touchHint{
+
+display:none;
+
+}
+
+.motionNotice{
+
+margin-top:25px;
+
+padding:16px 20px;
+
+border-radius:14px;
+
+background:rgba(251,191,36,.08);
+
+border:1px solid rgba(251,191,36,.18);
+
+color:#fde68a;
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+#fabricCanvas{
+
+touch-action:none;
+
+user-select:none;
+
+-webkit-user-select:none;
+
+}
+
+/* Pause indicator */
+
+.statusDot.paused{
+
+background:#94a3b8;
+
+box-shadow:0 0 10px #94a3b8;
+
+animation:none;
+
+}
+
+/* Interaction indicator */
+
+.statusDot.interacting{
+
+background:#fbbf24;
+
+box-shadow:0 0 14px #fbbf24;
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+.desktopHint{
+
+display:none;
+
+}
+
+.touchHint{
+
+display:inline;
+
+}
+
+.toolbarStats{
+
+width:100%;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.fabricMessage{
+
+font-size:13px;
+
+padding:12px 15px;
+
+}
+
+}
+
+/* Reduced-motion accessibility */
+
+@media(prefers-reduced-motion:reduce){
+
+.statusDot{
+
+animation:none;
+
+}
+
+.controlCard,
+.legendCard,
+.fabricMessage{
+
+transition:none;
+
+}
+
+}
+
+
+/* =====================================================
+PART 3.3B
+PLANET AND STAR ORBIT SIMULATOR STYLES
+===================================================== */
+
+#orbitSimulation{
+    margin-top:120px;
+}
+
+/* ===========================
+Main Layout
+=========================== */
+
+.orbitLayout{
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    gap:35px;
+    margin-top:45px;
+    align-items:start;
+}
+
+/* ===========================
+Canvas Panel
+=========================== */
+
+.orbitCanvasPanel{
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+}
+
+.orbitToolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 24px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+    font-family:"Special Elite",monospace;
+}
+
+#orbitCanvas{
+    display:block;
+    width:100%;
+    height:auto;
+    background:
+        radial-gradient(
+            circle at center,
+            #08111d,
+            #020617 72%
+        );
+    touch-action:none;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+.orbitHint{
+    padding:16px 20px;
+    text-align:center;
+    color:#7dd3fc;
+    background:rgba(255,255,255,.03);
+    font-size:15px;
+    line-height:1.6;
+}
+
+.orbitMessage{
+    padding:14px 20px;
+    text-align:center;
+    color:#bae6fd;
+    background:rgba(56,189,248,.07);
+    border-top:1px solid rgba(255,255,255,.06);
+    font-size:14px;
+    line-height:1.6;
+    transition:.3s;
+}
+
+.orbitMessage.active{
+    color:#bbf7d0;
+    background:rgba(34,197,94,.1);
+}
+
+.orbitMessage.warning{
+    color:#fde68a;
+    background:rgba(251,191,36,.1);
+}
+
+.orbitMessage.danger{
+    color:#fecaca;
+    background:rgba(239,68,68,.1);
+}
+
+.orbitMessage.paused{
+    color:#cbd5e1;
+    background:rgba(148,163,184,.1);
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.orbitSidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+#orbitSimulation .controlCard{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(12px);
+    transition:.35s;
+}
+
+#orbitSimulation .controlCard:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+#orbitSimulation .controlCard h3{
+    margin-bottom:20px;
+    color:#7dd3fc;
+    font-family:"Special Elite",monospace;
+}
+
+#orbitSimulation .controlCard label{
+    display:block;
+    margin-bottom:10px;
+    color:#dbeafe;
+    font-weight:600;
+}
+
+#orbitSimulation input[type="range"]{
+    width:100%;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+#orbitSimulation hr{
+    margin:22px 0;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ===========================
+Reset Button
+=========================== */
+
+#resetOrbit{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #38bdf8
+        );
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#resetOrbit:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 24px rgba(56,189,248,.45);
+}
+
+/* ===========================
+Preset Buttons
+=========================== */
+
+.orbitPresetGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.orbitPreset{
+    padding:12px 10px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:12px;
+    background:rgba(255,255,255,.04);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.orbitPreset:hover{
+    transform:translateY(-3px);
+    color:#7dd3fc;
+    border-color:rgba(56,189,248,.4);
+    background:rgba(56,189,248,.09);
+}
+
+.orbitPreset.active{
+    color:#ffffff;
+    border-color:#38bdf8;
+    background:rgba(56,189,248,.18);
+    box-shadow:0 0 18px rgba(56,189,248,.22);
+}
+
+/* ===========================
+Planet Legend
+=========================== */
+
+.orbitLegend{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:45px;
+}
+
+.planetLegendDot{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin-right:10px;
+    border-radius:50%;
+    vertical-align:middle;
+    box-shadow:0 0 12px currentColor;
+}
+
+.mercuryDot{
+    color:#d1d5db;
+    background:#d1d5db;
+}
+
+.earthDot{
+    color:#3b82f6;
+    background:#3b82f6;
+}
+
+.marsDot{
+    color:#ef4444;
+    background:#ef4444;
+}
+
+/* ===========================
+Orbit-specific Info
+=========================== */
+
+#orbitExplanation{
+    line-height:1.8;
+    color:#dbeafe;
+}
+
+#orbitFPS{
+    color:#7dd3fc;
+    font-size:15px;
+}
+
+/* ===========================
+Canvas Visual Helpers
+=========================== */
+
+.orbitGlow{
+    filter:drop-shadow(
+        0 0 10px rgba(56,189,248,.5)
+    );
+}
+
+.orbitVectorLabel{
+    font-family:"Special Elite",monospace;
+    font-size:12px;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1050px){
+
+    .orbitLayout{
+        grid-template-columns:1fr;
+    }
+
+    .orbitCanvasPanel{
+        order:1;
+    }
+
+    .orbitSidebar{
+        order:2;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .orbitToolbar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .orbitPresetGrid{
+        grid-template-columns:1fr;
+    }
+
+    .orbitLegend{
+        grid-template-columns:1fr;
+    }
+
+    #orbitSimulation .controlCard{
+        padding:20px;
+    }
+
+    .orbitHint,
+    .orbitMessage{
+        font-size:13px;
+        padding:12px 15px;
+    }
+
+}
+
+/* ===========================
+Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    #orbitSimulation .controlCard,
+    .orbitPreset,
+    .orbitMessage{
+        transition:none;
+    }
+
+}
+
+/* =====================================================
+PART 3.4B
+GRAVITATIONAL LENSING SIMULATOR STYLES
+===================================================== */
+
+#lensingSimulation{
+    margin-top:120px;
+}
+
+/* ===========================
+Main Layout
+=========================== */
+
+.lensingLayout{
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    gap:35px;
+    margin-top:45px;
+    align-items:start;
+}
+
+/* ===========================
+Canvas Panel
+=========================== */
+
+.lensingCanvasPanel{
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+}
+
+.lensingToolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 24px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+    font-family:"Special Elite",monospace;
+}
+
+#lensingCanvas{
+    display:block;
+    width:100%;
+    height:auto;
+    background:
+        radial-gradient(
+            circle at center,
+            #091321,
+            #020617 72%
+        );
+    touch-action:none;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+.lensingHint{
+    padding:16px 20px;
+    text-align:center;
+    color:#7dd3fc;
+    background:rgba(255,255,255,.03);
+    font-size:15px;
+    line-height:1.6;
+}
+
+.lensingMessage{
+    padding:14px 20px;
+    text-align:center;
+    color:#bae6fd;
+    background:rgba(56,189,248,.07);
+    border-top:1px solid rgba(255,255,255,.06);
+    font-size:14px;
+    line-height:1.6;
+    transition:.3s;
+}
+
+.lensingMessage.active{
+    color:#bbf7d0;
+    background:rgba(34,197,94,.10);
+}
+
+.lensingMessage.warning{
+    color:#fde68a;
+    background:rgba(251,191,36,.10);
+}
+
+.lensingMessage.danger{
+    color:#fecaca;
+    background:rgba(239,68,68,.10);
+}
+
+.lensingMessage.paused{
+    color:#cbd5e1;
+    background:rgba(148,163,184,.10);
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.lensingSidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+#lensingSimulation .controlCard{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:25px;
+    backdrop-filter:blur(12px);
+    transition:.35s;
+}
+
+#lensingSimulation .controlCard:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+}
+
+#lensingSimulation .controlCard h3{
+    margin-bottom:20px;
+    color:#7dd3fc;
+    font-family:"Special Elite",monospace;
+}
+
+#lensingSimulation .controlCard label{
+    display:block;
+    margin-bottom:10px;
+    color:#dbeafe;
+    font-weight:600;
+}
+
+#lensingSimulation input[type="range"]{
+    width:100%;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+#lensingSimulation hr{
+    margin:22px 0;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ===========================
+Reset Button
+=========================== */
+
+#resetLensing{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #38bdf8
+        );
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#resetLensing:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 24px rgba(56,189,248,.45);
+}
+
+/* ===========================
+Preset Buttons
+=========================== */
+
+.lensingPresetGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.lensingPreset{
+    padding:12px 10px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:12px;
+    background:rgba(255,255,255,.04);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.lensingPreset:hover{
+    transform:translateY(-3px);
+    color:#7dd3fc;
+    border-color:rgba(56,189,248,.40);
+    background:rgba(56,189,248,.09);
+}
+
+.lensingPreset.active{
+    color:#fff;
+    border-color:#38bdf8;
+    background:rgba(56,189,248,.18);
+    box-shadow:0 0 18px rgba(56,189,248,.22);
+}
+
+/* ===========================
+Legend
+=========================== */
+
+.lensingLegend{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:45px;
+}
+
+.lensLegendDot{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin-right:10px;
+    border-radius:50%;
+    vertical-align:middle;
+    box-shadow:0 0 12px currentColor;
+}
+
+.sourceDot{
+    color:#a78bfa;
+    background:#a78bfa;
+}
+
+.lensDot{
+    color:#facc15;
+    background:#facc15;
+}
+
+.observerDot{
+    color:#22c55e;
+    background:#22c55e;
+}
+
+/* ===========================
+Information and Explanation
+=========================== */
+
+#lensingExplanation{
+    line-height:1.8;
+    color:#dbeafe;
+}
+
+#lensingFPS{
+    color:#7dd3fc;
+    font-size:15px;
+}
+
+/* ===========================
+Optional Canvas Helpers
+=========================== */
+
+.lensingGlow{
+    filter:drop-shadow(
+        0 0 10px rgba(56,189,248,.5)
+    );
+}
+
+.lensingVectorLabel{
+    font-family:"Special Elite",monospace;
+    font-size:12px;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1050px){
+
+    .lensingLayout{
+        grid-template-columns:1fr;
+    }
+
+    .lensingCanvasPanel{
+        order:1;
+    }
+
+    .lensingSidebar{
+        order:2;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .lensingToolbar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .lensingPresetGrid{
+        grid-template-columns:1fr;
+    }
+
+    .lensingLegend{
+        grid-template-columns:1fr;
+    }
+
+    #lensingSimulation .controlCard{
+        padding:20px;
+    }
+
+    .lensingHint,
+    .lensingMessage{
+        font-size:13px;
+        padding:12px 15px;
+    }
+
+}
+
+/* ===========================
+Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    #lensingSimulation .controlCard,
+    .lensingPreset,
+    .lensingMessage{
+        transition:none;
+    }
+
+}
+
+/* =====================================================
+PART 3.5B
+BLACK HOLE SIMULATOR STYLES
+===================================================== */
+
+#blackHoleSimulation{
+    margin-top:120px;
+}
+
+/* ===========================
+Main Layout
+=========================== */
+
+.blackHoleLayout{
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    gap:35px;
+    margin-top:45px;
+    align-items:start;
+}
+
+/* ===========================
+Canvas Panel
+=========================== */
+
+.blackHoleCanvasPanel{
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+}
+
+.blackHoleToolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 24px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+    font-family:"Special Elite",monospace;
+}
+
+#blackHoleCanvas{
+    display:block;
+    width:100%;
+    height:auto;
+    background:
+        radial-gradient(
+            circle at center,
+            #090b14,
+            #020617 74%
+        );
+    touch-action:none;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+.blackHoleHint{
+    padding:16px 20px;
+    text-align:center;
+    color:#7dd3fc;
+    background:rgba(255,255,255,.03);
+    font-size:15px;
+    line-height:1.6;
+}
+
+.blackHoleMessage{
+    padding:14px 20px;
+    text-align:center;
+    color:#bae6fd;
+    background:rgba(56,189,248,.07);
+    border-top:1px solid rgba(255,255,255,.06);
+    font-size:14px;
+    line-height:1.6;
+    transition:.3s;
+}
+
+.blackHoleMessage.active{
+    color:#bbf7d0;
+    background:rgba(34,197,94,.10);
+}
+
+.blackHoleMessage.warning{
+    color:#fde68a;
+    background:rgba(251,191,36,.10);
+}
+
+.blackHoleMessage.danger{
+    color:#fecaca;
+    background:rgba(239,68,68,.10);
+}
+
+.blackHoleMessage.paused{
+    color:#cbd5e1;
+    background:rgba(148,163,184,.10);
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.blackHoleSidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+#blackHoleSimulation .controlCard{
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    transition:.35s;
+}
+
+#blackHoleSimulation .controlCard:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+}
+
+#blackHoleSimulation .controlCard h3{
+    margin-bottom:20px;
+    color:#7dd3fc;
+    font-family:"Special Elite",monospace;
+}
+
+#blackHoleSimulation .controlCard label{
+    display:block;
+    margin-bottom:10px;
+    color:#dbeafe;
+    font-weight:600;
+}
+
+#blackHoleSimulation input[type="range"]{
+    width:100%;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+#blackHoleSimulation hr{
+    margin:22px 0;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ===========================
+Reset Button
+=========================== */
+
+#resetBlackHole{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:
+        linear-gradient(
+            90deg,
+            #7c3aed,
+            #2563eb,
+            #38bdf8
+        );
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#resetBlackHole:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 24px rgba(56,189,248,.45);
+}
+
+/* ===========================
+Preset Buttons
+=========================== */
+
+.blackHolePresetGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.blackHolePreset{
+    padding:12px 10px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:12px;
+    background:rgba(255,255,255,.04);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.blackHolePreset:hover{
+    transform:translateY(-3px);
+    color:#c4b5fd;
+    border-color:rgba(167,139,250,.45);
+    background:rgba(124,58,237,.12);
+}
+
+.blackHolePreset.active{
+    color:#fff;
+    border-color:#8b5cf6;
+    background:rgba(124,58,237,.22);
+    box-shadow:0 0 18px rgba(139,92,246,.28);
+}
+
+/* ===========================
+Legend
+=========================== */
+
+.blackHoleLegend{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:45px;
+}
+
+.blackHoleLegendDot{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin-right:10px;
+    border-radius:50%;
+    vertical-align:middle;
+    box-shadow:0 0 12px currentColor;
+}
+
+.horizonDot{
+    color:#111827;
+    background:#020617;
+    border:1px solid rgba(255,255,255,.45);
+}
+
+.photonDot{
+    color:#f8fafc;
+    background:#f8fafc;
+}
+
+.diskDot{
+    color:#f97316;
+    background:#f97316;
+}
+
+/* ===========================
+Information
+=========================== */
+
+#blackHoleExplanation{
+    color:#dbeafe;
+    line-height:1.8;
+}
+
+#blackHoleFPS{
+    color:#7dd3fc;
+    font-size:15px;
+}
+
+/* ===========================
+Canvas Helpers
+=========================== */
+
+.blackHoleGlow{
+    filter:drop-shadow(
+        0 0 14px rgba(139,92,246,.55)
+    );
+}
+
+.blackHoleWarning{
+    color:#fde68a;
+}
+
+.blackHoleDanger{
+    color:#fecaca;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1050px){
+
+    .blackHoleLayout{
+        grid-template-columns:1fr;
+    }
+
+    .blackHoleCanvasPanel{
+        order:1;
+    }
+
+    .blackHoleSidebar{
+        order:2;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .blackHoleToolbar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .blackHolePresetGrid{
+        grid-template-columns:1fr;
+    }
+
+    .blackHoleLegend{
+        grid-template-columns:1fr;
+    }
+
+    #blackHoleSimulation .controlCard{
+        padding:20px;
+    }
+
+    .blackHoleHint,
+    .blackHoleMessage{
+        padding:12px 15px;
+        font-size:13px;
+    }
+
+}
+
+/* ===========================
+Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    #blackHoleSimulation .controlCard,
+    .blackHolePreset,
+    .blackHoleMessage{
+        transition:none;
+    }
+
+}
+
+/* =====================================================
+PART 3.6B
+GRAVITATIONAL WAVES SIMULATOR STYLES
+===================================================== */
+
+#gravitationalWavesSimulation{
+    margin-top:120px;
+}
+
+/* ===========================
+Main Layout
+=========================== */
+
+.waveLayout{
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    gap:35px;
+    margin-top:45px;
+    align-items:start;
+}
+
+/* ===========================
+Main Canvas Panel
+=========================== */
+
+.waveCanvasPanel{
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+}
+
+.waveToolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 24px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+    font-family:"Special Elite",monospace;
+}
+
+#waveCanvas{
+    display:block;
+    width:100%;
+    height:auto;
+    background:
+        radial-gradient(
+            circle at center,
+            #08111d,
+            #020617 74%
+        );
+    touch-action:none;
+    user-select:none;
+    -webkit-user-select:none;
+}
+
+.waveHint{
+    padding:16px 20px;
+    text-align:center;
+    color:#7dd3fc;
+    background:rgba(255,255,255,.03);
+    font-size:15px;
+    line-height:1.6;
+}
+
+.waveMessage{
+    padding:14px 20px;
+    text-align:center;
+    color:#bae6fd;
+    background:rgba(56,189,248,.07);
+    border-top:1px solid rgba(255,255,255,.06);
+    font-size:14px;
+    line-height:1.6;
+    transition:.3s;
+}
+
+.waveMessage.active{
+    color:#bbf7d0;
+    background:rgba(34,197,94,.10);
+}
+
+.waveMessage.warning{
+    color:#fde68a;
+    background:rgba(251,191,36,.10);
+}
+
+.waveMessage.danger{
+    color:#fecaca;
+    background:rgba(239,68,68,.10);
+}
+
+.waveMessage.paused{
+    color:#cbd5e1;
+    background:rgba(148,163,184,.10);
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.waveSidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+#gravitationalWavesSimulation .controlCard{
+    padding:25px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(12px);
+    transition:.35s;
+}
+
+#gravitationalWavesSimulation .controlCard:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.30);
+}
+
+#gravitationalWavesSimulation .controlCard h3{
+    margin-bottom:20px;
+    color:#7dd3fc;
+    font-family:"Special Elite",monospace;
+}
+
+#gravitationalWavesSimulation .controlCard label{
+    display:block;
+    margin-bottom:10px;
+    color:#dbeafe;
+    font-weight:600;
+}
+
+#gravitationalWavesSimulation input[type="range"]{
+    width:100%;
+    margin-bottom:8px;
+    cursor:pointer;
+}
+
+#gravitationalWavesSimulation hr{
+    margin:22px 0;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* ===========================
+Reset Button
+=========================== */
+
+#resetWaves{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:40px;
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #38bdf8,
+            #8b5cf6
+        );
+    color:white;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#resetWaves:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 24px rgba(56,189,248,.45);
+}
+
+/* ===========================
+Preset Buttons
+=========================== */
+
+.wavePresetGrid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.wavePreset{
+    padding:12px 10px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:12px;
+    background:rgba(255,255,255,.04);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.wavePreset:hover{
+    transform:translateY(-3px);
+    color:#7dd3fc;
+    border-color:rgba(56,189,248,.42);
+    background:rgba(56,189,248,.10);
+}
+
+.wavePreset.active{
+    color:#fff;
+    border-color:#38bdf8;
+    background:rgba(56,189,248,.18);
+    box-shadow:0 0 18px rgba(56,189,248,.24);
+}
+
+/* ===========================
+Detector Panel
+=========================== */
+
+.waveDetectorPanel,
+.waveGraphPanel{
+    margin-top:35px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:22px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(12px);
+}
+
+.waveDetectorHeader,
+.waveGraphHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding:18px 24px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+}
+
+.waveDetectorHeader h3,
+.waveGraphHeader h3{
+    margin:0;
+    color:#7dd3fc;
+    font-family:"Special Elite",monospace;
+}
+
+#detectorStatus,
+#waveGraphLabel{
+    color:#bae6fd;
+    font-family:"Special Elite",monospace;
+    font-size:14px;
+}
+
+#detectorCanvas,
+#waveGraphCanvas{
+    display:block;
+    width:100%;
+    height:auto;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8,17,29,.98),
+            rgba(2,6,23,.98)
+        );
+}
+
+.waveDetectorNote{
+    padding:15px 20px;
+    text-align:center;
+    color:#cbd5e1;
+    background:rgba(255,255,255,.025);
+    font-size:14px;
+    line-height:1.7;
+}
+
+/* ===========================
+Legend
+=========================== */
+
+.waveLegend{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:45px;
+}
+
+.waveLegendDot{
+    display:inline-block;
+    width:16px;
+    height:16px;
+    margin-right:10px;
+    border-radius:50%;
+    vertical-align:middle;
+    box-shadow:0 0 12px currentColor;
+}
+
+.primaryWaveDot{
+    color:#facc15;
+    background:#facc15;
+}
+
+.secondaryWaveDot{
+    color:#38bdf8;
+    background:#38bdf8;
+}
+
+.rippleWaveDot{
+    color:#a78bfa;
+    background:#a78bfa;
+}
+
+.detectorWaveDot{
+    color:#22c55e;
+    background:#22c55e;
+}
+
+/* ===========================
+Information
+=========================== */
+
+#waveExplanation{
+    color:#dbeafe;
+    line-height:1.8;
+}
+
+#waveFPS{
+    color:#7dd3fc;
+    font-size:15px;
+}
+
+/* ===========================
+Canvas Helpers
+=========================== */
+
+.waveGlow{
+    filter:drop-shadow(
+        0 0 12px rgba(56,189,248,.55)
+    );
+}
+
+.waveSignalActive{
+    color:#bbf7d0;
+}
+
+.waveSignalWeak{
+    color:#fde68a;
+}
+
+.waveSignalLost{
+    color:#fecaca;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1050px){
+
+    .waveLayout{
+        grid-template-columns:1fr;
+    }
+
+    .waveCanvasPanel{
+        order:1;
+    }
+
+    .waveSidebar{
+        order:2;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .waveToolbar,
+    .waveDetectorHeader,
+    .waveGraphHeader{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .wavePresetGrid{
+        grid-template-columns:1fr;
+    }
+
+    .waveLegend{
+        grid-template-columns:1fr;
+    }
+
+    #gravitationalWavesSimulation .controlCard{
+        padding:20px;
+    }
+
+    .waveHint,
+    .waveMessage,
+    .waveDetectorNote{
+        padding:12px 15px;
+        font-size:13px;
+    }
+
+}
+
+/* ===========================
+Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    #gravitationalWavesSimulation .controlCard,
+    .wavePreset,
+    .waveMessage{
+        transition:none;
+    }
+
+}
