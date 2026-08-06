@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Fourth Dimension</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+background:#02030a;
+color:white;
+font-family:Arial,sans-serif;
+overflow-x:hidden;
+}
+
+canvas{
+position:fixed;
+inset:0;
+z-index:-2;
+}
+
+.bg{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 20% 30%,#00ffff33,transparent 35%),
+radial-gradient(circle at 80% 70%,#ff00ff33,transparent 40%);
+animation:bg 12s infinite alternate;
+z-index:-1;
+}
+
+@keyframes bg{
+to{transform:scale(1.3) rotate(5deg)}
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+}
+
+.portal{
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+background:conic-gradient(
+cyan,blue,purple,pink,cyan);
+filter:blur(25px);
+animation:spin 12s linear infinite;
+opacity:.5;
+}
+
+.portal:after{
+content:"";
+position:absolute;
+inset:70px;
+border-radius:50%;
+background:#02030a;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg)}
+}
+
+h1{
+font-size:80px;
+background:linear-gradient(90deg,#00ffff,#9b5cff,#ff00cc);
+-webkit-background-clip:text;
+color:transparent;
+animation:float 5s infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-20px)}
+}
+
+p{
+max-width:750px;
+margin:25px auto;
+font-size:20px;
+line-height:1.7;
+color:#ddd;
+}
+
+button{
+padding:18px 40px;
+border:0;
+border-radius:50px;
+background:#00ffff;
+cursor:pointer;
+font-size:18px;
+box-shadow:0 0 30px cyan;
+}
+
+section{
+padding:100px 10%;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+background:#ffffff10;
+border:1px solid #ffffff22;
+padding:30px;
+border-radius:25px;
+backdrop-filter:blur(15px);
+transition:.5s;
+}
+
+.card:hover{
+transform:
+translateY(-15px)
+rotateY(10deg);
+box-shadow:0 0 40px cyan;
+}
+
+.card h2{
+color:#00ffff;
+margin-bottom:15px;
+}
+
+.cube-area{
+height:500px;
+display:flex;
+justify-content:center;
+align-items:center;
+perspective:800px;
+}
+
+.cube{
+width:200px;
+height:200px;
+position:relative;
+transform-style:preserve-3d;
+animation:cube 10s infinite linear;
+}
+
+.face{
+position:absolute;
+width:200px;
+height:200px;
+border:3px solid cyan;
+background:#00ffff15;
+box-shadow:0 0 30px cyan inset;
+}
+
+.front{transform:translateZ(100px)}
+.back{transform:rotateY(180deg) translateZ(100px)}
+.right{transform:rotateY(90deg) translateZ(100px)}
+.left{transform:rotateY(-90deg) translateZ(100px)}
+.top{transform:rotateX(90deg) translateZ(100px)}
+.bottom{transform:rotateX(-90deg) translateZ(100px)}
+
+@keyframes cube{
+to{
+transform:rotateX(360deg) rotateY(360deg);
+}
+}
+
+.fade{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.show{
+opacity:1;
+transform:none;
+}
+
+footer{
+text-align:center;
+padding:80px;
+color:#aaa;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<canvas id="stars"></canvas>
+
+<div class="hero">
+
+<div class="portal"></div>
+
+<div>
+<h1>THE FOURTH DIMENSION</h1>
+
+<p>
+A journey beyond ordinary space.
+A four-dimensional world where cubes become tesseracts
+and reality may have hidden directions.
+</p>
+
+<button onclick="document.querySelector('#learn').scrollIntoView({behavior:'smooth'})">
+ENTER
+</button>
+
+</div>
+
+</div>
+
+
+<section id="learn" class="fade">
+
+<h2 style="font-size:50px">
+Beyond Our Reality
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<h2>🧊 Tesseract</h2>
+<p>
+The 4D equivalent of a cube. It contains cubes connected
+in ways our brains cannot directly visualize.
+</p>
+</div>
+
+<div class="card">
+<h2>👁 Higher Beings</h2>
+<p>
+A 4D creature could theoretically see inside closed 3D objects.
+</p>
+</div>
+
+<div class="card">
+<h2>🌌 Hidden Universe</h2>
+<p>
+Some physics theories suggest extra dimensions may exist beyond perception.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="fade">
+
+<h2 style="font-size:50px">
+Rotating 4D Shadow
+</h2>
+
+<div class="cube-area">
+
+<div class="cube">
+<div class="face front"></div>
+<div class="face back"></div>
+<div class="face right"></div>
+<div class="face left"></div>
+<div class="face top"></div>
+<div class="face bottom"></div>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+<h2>
+"The universe may contain directions we cannot see."
+</h2>
+</footer>
+
+
+<script>
+
+const canvas=document.getElementById("stars");
+const ctx=canvas.getContext("2d");
+
+function resize(){
+canvas.width=innerWidth;
+canvas.height=innerHeight;
+}
+
+resize();
+onresize=resize;
+
+let stars=[];
+
+for(let i=0;i<250;i++){
+stars.push({
+x:Math.random()*innerWidth,
+y:Math.random()*innerHeight,
+r:Math.random()*2,
+s:Math.random()*1.5
+});
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+stars.forEach(s=>{
+
+s.y+=s.s;
+
+if(s.y>innerHeight)s.y=0;
+
+ctx.beginPath();
+ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+ctx.fillStyle="white";
+ctx.fill();
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+
+const observer=new IntersectionObserver(e=>{
+e.forEach(x=>{
+if(x.isIntersecting)
+x.target.classList.add("show");
+});
+});
+
+document.querySelectorAll(".fade")
+.forEach(x=>observer.observe(x));
+
+
+document.addEventListener("mousemove",e=>{
+
+document.querySelector(".portal").style.transform=
+`translate(${(e.clientX-innerWidth/2)/20}px,
+${(e.clientY-innerHeight/2)/20}px)`;
+
+});
+
+</script>
+
+</body>
+</html>
