@@ -6,6 +6,9 @@ const SUJOY_EMAILS = [
     "newton@sujoy.in",
     "heisenberg@sujoy.in",
     "planck@sujoy.in",
+    "pauling@sujoy.in",
+    "curie@sujoy.in",
+    "raman@sujoy.in",
     "proton@sujoy.in",
     "helium@sujoy.in"
 ];
