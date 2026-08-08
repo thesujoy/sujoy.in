@@ -268,26 +268,31 @@
     ===================================================== */
 
     .site-header {
+    position: fixed;
 
-        position: fixed;
+    top: 0;
+    left: 0;
 
-        top: 0;
-        left: 0;
+    width: 100%;
+    height: var(--header-height);
 
-        width: 100%;
-        height: var(--header-height);
+    z-index: 1000;
 
-        z-index: 1000;
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        backdrop-filter 0.35s ease;
+}
 
-        background:
-            rgba(248, 250, 252, 0.78);
+.site-header.scrolled {
+    background: rgba(248, 250, 252, 0.86);
 
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
-        border-bottom:
-            1px solid var(--line);
-    }
+    box-shadow:
+        0 1px 0 rgba(23, 32, 51, 0.07);
+}
 
     .nav {
 
@@ -405,7 +410,7 @@
         border-radius: 100px;
 
         background:
-            rgba(255,255,255,.65);
+            rgba(255,255,255,.62);
 
         cursor: pointer;
 
@@ -422,11 +427,14 @@
 
         transform:
             translateY(-1px);
+
+        box-shadow:
+        0 8px 24px rgba(23, 32, 51, 0.08);
     }
 
     .menu-label {
 
-        font-size: .67rem;
+        font-size: .68rem;
         font-weight: 700;
 
         letter-spacing: .16em;
@@ -1319,49 +1327,44 @@
     ===================================================== */
 
     footer {
+    border-top: 1px solid var(--line);
 
-        border-top:
-            1px solid var(--line);
+    padding: 38px 20px 42px;
+}
 
-        padding:
-            34px 20px 38px;
-    }
+.footer-inner {
+    width: min(100%, var(--max-width));
 
-    .footer-inner {
+    margin: auto;
 
-        width:
-            min(
-                100%,
-                var(--max-width)
-            );
+    display: grid;
 
-        margin: auto;
+    grid-template-columns: 1fr auto auto;
 
-        display: grid;
+    align-items: center;
 
-        grid-template-columns:
-            1fr auto auto;
+    gap: 45px;
+}
 
-        align-items: center;
+.footer-copy {
+    min-width: 0;
+}
 
-        gap: 40px;
-    }
+.copyright {
+    color: var(--muted);
 
-    .copyright {
+    font-size: 0.82rem;
+}
 
-        color: var(--muted);
+.footer-note {
+    margin-top: 7px;
 
-        font-size: .78rem;
-    }
+    max-width: 520px;
 
-    .footer-note {
+    color: #939daf;
 
-        margin-top: 6px;
-
-        color: #939daf;
-
-        font-size: .74rem;
-    }
+    font-size: 0.78rem;
+}
 
 
     /* =====================================================
@@ -1378,6 +1381,8 @@
 
     .social-link {
 
+        position: relative;
+
         width: 37px;
         height: 37px;
 
@@ -1393,13 +1398,14 @@
         color: var(--muted);
 
         background:
-            rgba(255,255,255,.4);
+            rgba(255,255,255,.42);
 
         transition:
             color .25s ease,
             background .25s ease,
             border-color .25s ease,
             transform .25s ease;
+            box-shadow 0.25s ease;
     }
 
     .social-link:hover {
@@ -1410,11 +1416,19 @@
             var(--accent-soft);
 
         border-color:
-            rgba(83,103,232,.20);
+            rgba(83,103,232,.22);
 
         transform:
             translateY(-3px);
+        box-shadow:
+        0 8px 20px rgba(83, 103, 232, 0.10);
     }
+
+    .social-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
 
     .social-link svg {
 
@@ -1425,19 +1439,34 @@
 
         stroke: currentColor;
 
-        stroke-width: 1.7;
+        stroke-width: 1.65;
 
-        stroke-linecap: round;
-        stroke-linejoin: round;
+        transition:
+        transform 0.25s ease;
+
+        /*stroke-linecap: round;
+        stroke-linejoin: round;*/
     }
 
-    .social-link.facebook svg,
+        .social-link:nth-child(2) svg,
+        .social-link:nth-child(5) svg {
+            fill: currentColor;
+            stroke: none;
+        }
+
+        
+
+    /*.social-link.facebook svg,
     .social-link.bluesky svg {
 
         fill: currentColor;
 
         stroke: none;
-    }
+    }*/
+
+    .social-link:hover svg {
+    transform: scale(1.06);
+}
 
     .social-dot {
 
@@ -1448,12 +1477,13 @@
     .footer-mark {
 
         font-family:
-            Georgia,
-            serif;
+        "Times New Roman",
+        Times,
+        serif;
 
         color: #a4acba;
 
-        font-size: 1.25rem;
+        font-size: 1.4rem;
 
         font-style: italic;
 
@@ -1465,7 +1495,7 @@
        MOBILE
     ===================================================== */
 
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
 
         :root {
             --header-height: 68px;
@@ -1496,7 +1526,7 @@
 
         .menu-label {
 
-            font-size: .58rem;
+            font-size: .59rem;
         }
 
         .menu-icon {
@@ -1631,7 +1661,7 @@
 
             align-items: flex-start;
 
-            gap: 19px;
+            gap: 20px;
         }
 
         .footer-socials {
@@ -1641,7 +1671,7 @@
 
         .footer-mark {
 
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
     }
 
@@ -2169,7 +2199,7 @@ Ff61l+0ztr7MWgs=
     <div class="footer-inner">
 
 
-        <div>
+        <div class="footer-copy">
 
             <p class="copyright">
 
@@ -2319,6 +2349,31 @@ Ff61l+0ztr7MWgs=
 <script src="../email-pool.js"></script>
 
 <script>
+
+
+    /* =====================================================
+       HEADER SCROLL
+    ===================================================== */
+
+    const header =
+        document.getElementById("header");
+
+    function handleHeader() {
+
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 20
+        );
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        handleHeader,
+        { passive: true }
+    );
+
+    handleHeader();
 
     /* =====================================================
        MENU
