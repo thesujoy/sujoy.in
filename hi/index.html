@@ -26,23 +26,23 @@
 
     <link rel="icon"
           type="image/x-icon"
-          href="../favicon.ico">
+          href="/favicon.ico">
 
     <link rel="icon"
           type="image/png"
           sizes="16x16"
-          href="../favicon-16x16.png">
+          href="/favicon-16x16.png">
 
     <link rel="icon"
           type="image/png"
           sizes="32x32"
-          href="../favicon-32x32.png">
+          href="/favicon-32x32.png">
 
     <link rel="apple-touch-icon"
-          href="../apple-touch-icon.png">
+          href="/apple-touch-icon.png">
 
     <link rel="manifest"
-          href="../site.webmanifest">
+          href="/site.webmanifest">
 
 
 <style>
@@ -68,6 +68,9 @@
 
         --header-height: 76px;
         --max-width: 1160px;
+
+        --redirect-time: 20s;
+        
     }
 
 
@@ -1321,7 +1324,8 @@
 
         animation:
             redirectProgress
-            10s linear forwards;
+        var(--redirect-time)
+        linear forwards;
     }
 
     @keyframes redirectProgress {
@@ -1819,7 +1823,7 @@
 
             animation:
                 redirectProgress
-                10s linear forwards
+                20s linear forwards
                 !important;
         }
     }
@@ -2554,7 +2558,7 @@
                 }
 
             },
-            2000
+            1000
         );
 
 </script>
