@@ -1,32 +1,25 @@
 {
-  "name": "Sujoy",
-  "short_name": "Sujoy",
-  "description": "Explore strange, fascinating and important theories of science.",
-  "start_url": "/",
-  "scope": "/",
-  "display": "standalone",
-  "background_color": "#03050d",
-  "theme_color": "#03050d",
-  "orientation": "any",
-  "lang": "en",
-  "icons": [
-    {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icon-maskable-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
-  ]
+    "name": "SUJOY — Science, Curiosity & Ideas",
+    "short_name": "SUJOY",
+    "description": "A quiet corner of the web for science, ideas, curiosity and everything that makes us wonder.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#f8fafc",
+    "theme_color": "#f8fafc",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
 }
