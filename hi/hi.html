@@ -13,7 +13,7 @@
 
     <meta name="color-scheme" content="dark">
 
-    <title>404 — Lost in Spacetime | Sujoy</title>
+    <title>Lost? | Sujoy</title>
 
     <link rel="icon"
           href="/favicon.ico"
@@ -35,28 +35,16 @@
 
     <style>
 
-        /* =====================================================
-           ROOT
-        ===================================================== */
-
         :root {
             --bg: #03050d;
-
             --text: #f5f7ff;
             --muted: #9ca9c5;
-
             --accent: #8878ff;
             --accent-2: #5edcff;
-
             --line: rgba(255,255,255,.08);
-
             --max-width: 1180px;
         }
 
-
-        /* =====================================================
-           RESET
-        ===================================================== */
 
         * {
             margin: 0;
@@ -64,27 +52,26 @@
             box-sizing: border-box;
         }
 
+
         html {
             min-height: 100%;
         }
+
 
         body {
             min-height: 100vh;
             min-height: 100dvh;
 
             color: var(--text);
-
             background: var(--bg);
 
-            font-family:
-                "IBM Plex Sans",
-                sans-serif;
+            font-family: "IBM Plex Sans", sans-serif;
 
-            -webkit-font-smoothing:
-                antialiased;
+            -webkit-font-smoothing: antialiased;
 
             overflow-x: hidden;
         }
+
 
         a {
             color: inherit;
@@ -93,7 +80,7 @@
 
 
         /* =====================================================
-           PAGE LAYOUT
+           PAGE
         ===================================================== */
 
         .page {
@@ -119,7 +106,6 @@
 
         .space {
             position: fixed;
-
             inset: 0;
 
             z-index: -10;
@@ -176,8 +162,7 @@
                     transparent 1.3px
                 );
 
-            background-size:
-                90px 90px;
+            background-size: 90px 90px;
 
             animation:
                 starsOne 65s linear infinite;
@@ -194,8 +179,7 @@
                     transparent 1.6px
                 );
 
-            background-size:
-                170px 150px;
+            background-size: 170px 150px;
 
             animation:
                 starsTwo 48s linear infinite;
@@ -212,8 +196,7 @@
                     transparent 2px
                 );
 
-            background-size:
-                290px 250px;
+            background-size: 290px 250px;
 
             animation:
                 starsThree 38s linear infinite;
@@ -223,13 +206,11 @@
         @keyframes starsOne {
 
             from {
-                transform:
-                    translate3d(0,0,0);
+                transform: translate3d(0,0,0);
             }
 
             to {
-                transform:
-                    translate3d(0,-180px,0);
+                transform: translate3d(0,-180px,0);
             }
 
         }
@@ -238,13 +219,11 @@
         @keyframes starsTwo {
 
             from {
-                transform:
-                    translate3d(0,0,0);
+                transform: translate3d(0,0,0);
             }
 
             to {
-                transform:
-                    translate3d(-120px,-250px,0);
+                transform: translate3d(-120px,-250px,0);
             }
 
         }
@@ -253,13 +232,11 @@
         @keyframes starsThree {
 
             from {
-                transform:
-                    translate3d(0,0,0);
+                transform: translate3d(0,0,0);
             }
 
             to {
-                transform:
-                    translate3d(150px,-300px,0);
+                transform: translate3d(150px,-300px,0);
             }
 
         }
@@ -292,11 +269,7 @@
             background: #6553ff;
 
             animation:
-                nebulaOne
-                15s
-                ease-in-out
-                infinite
-                alternate;
+                nebulaOne 15s ease-in-out infinite alternate;
         }
 
 
@@ -312,11 +285,7 @@
             background: #29b6e8;
 
             animation:
-                nebulaTwo
-                19s
-                ease-in-out
-                infinite
-                alternate;
+                nebulaTwo 19s ease-in-out infinite alternate;
         }
 
 
@@ -332,11 +301,7 @@
             background: #a653ff;
 
             animation:
-                nebulaThree
-                22s
-                ease-in-out
-                infinite
-                alternate;
+                nebulaThree 22s ease-in-out infinite alternate;
         }
 
 
@@ -398,18 +363,13 @@
 
             filter:
                 drop-shadow(
-                    0 0 5px
-                    rgba(96,220,255,.8)
+                    0 0 5px rgba(96,220,255,.8)
                 );
 
-            transform:
-                rotate(-35deg);
+            transform: rotate(-35deg);
 
             animation:
-                shooting
-                9s
-                ease-in-out
-                infinite;
+                shooting 9s ease-in-out infinite;
         }
 
 
@@ -432,11 +392,7 @@
                 opacity: 0;
 
                 transform:
-                    translate3d(
-                        -400px,
-                        280px,
-                        0
-                    )
+                    translate3d(-400px,280px,0)
                     rotate(-35deg);
             }
 
@@ -459,7 +415,6 @@
             min-height: 78px;
 
             display: flex;
-
             align-items: center;
         }
 
@@ -486,9 +441,7 @@
 
             gap: 10px;
 
-            font-family:
-                "Space Grotesk",
-                sans-serif;
+            font-family: "Space Grotesk", sans-serif;
 
             font-size: 1.4rem;
 
@@ -518,17 +471,11 @@
                 );
 
             box-shadow:
-                0 0 15px
-                rgba(95,225,255,.30),
-
-                0 0 32px
-                rgba(139,124,255,.22);
+                0 0 15px rgba(95,225,255,.30),
+                0 0 32px rgba(139,124,255,.22);
 
             animation:
-                logoPulse
-                4s
-                ease-in-out
-                infinite;
+                logoPulse 4s ease-in-out infinite;
         }
 
 
@@ -544,8 +491,7 @@
             top: 50%;
 
             border:
-                1.5px solid
-                rgba(255,255,255,.75);
+                1.5px solid rgba(255,255,255,.75);
 
             border-radius: 50%;
 
@@ -554,10 +500,7 @@
                 rotate(-25deg);
 
             animation:
-                logoOrbit
-                7s
-                linear
-                infinite;
+                logoOrbit 7s linear infinite;
         }
 
 
@@ -592,22 +535,15 @@
                     #fff 100%
                 );
 
-            background-size:
-                200% auto;
+            background-size: 200% auto;
 
-            -webkit-background-clip:
-                text;
-
-            background-clip:
-                text;
+            -webkit-background-clip: text;
+            background-clip: text;
 
             color: transparent;
 
             animation:
-                logoText
-                5s
-                linear
-                infinite;
+                logoText 5s linear infinite;
         }
 
 
@@ -633,20 +569,14 @@
             0%,
             100% {
                 box-shadow:
-                    0 0 14px
-                    rgba(95,225,255,.28),
-
-                    0 0 28px
-                    rgba(139,124,255,.18);
+                    0 0 14px rgba(95,225,255,.28),
+                    0 0 28px rgba(139,124,255,.18);
             }
 
             50% {
                 box-shadow:
-                    0 0 22px
-                    rgba(95,225,255,.50),
-
-                    0 0 45px
-                    rgba(139,124,255,.30);
+                    0 0 22px rgba(95,225,255,.50),
+                    0 0 45px rgba(139,124,255,.30);
             }
 
         }
@@ -655,13 +585,11 @@
         @keyframes logoText {
 
             from {
-                background-position:
-                    200% center;
+                background-position: 200% center;
             }
 
             to {
-                background-position:
-                    -200% center;
+                background-position: -200% center;
             }
 
         }
@@ -694,7 +622,7 @@
         .content {
             width: 100%;
 
-            max-width: 700px;
+            max-width: 680px;
 
             margin-inline: auto;
 
@@ -703,126 +631,53 @@
 
 
         /* =====================================================
-           PLANET / ORBIT
+           IMAGE
         ===================================================== */
 
-        .orbit-wrap {
+        .image-wrap {
             position: relative;
 
-            width: 145px;
-            height: 145px;
+            width: 156px;
+            height: 156px;
 
             margin:
                 0 auto
-                18px;
+                30px;
 
-            display: grid;
+            border-radius: 50%;
 
-            place-items: center;
+            padding: 4px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(108,219,255,.95),
+                    rgba(127,96,255,.95),
+                    rgba(199,111,255,.8)
+                );
+
+            box-shadow:
+                0 0 30px rgba(95,225,255,.14),
+                0 0 55px rgba(139,124,255,.16);
 
             opacity: 0;
 
             transform:
-                translateY(15px)
+                translateY(18px)
                 scale(.92);
 
             animation:
-                appear
-                .8s
-                ease
-                .05s
-                forwards;
+                appear .8s ease .08s forwards,
+                imageFloat 5s ease-in-out 1s infinite;
         }
 
 
-        .planet {
-            position: relative;
-
-            width: 76px;
-            height: 76px;
-
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle at 32% 27%,
-                    #91efff 0%,
-                    #5578ff 22%,
-                    #4c2a9a 53%,
-                    #11142d 76%
-                );
-
-            box-shadow:
-                inset -15px -15px 25px
-                rgba(0,0,0,.35),
-
-                0 0 30px
-                rgba(93,120,255,.22),
-
-                0 0 70px
-                rgba(103,74,255,.12);
-
-            animation:
-                planetFloat
-                4s
-                ease-in-out
-                infinite;
-        }
-
-
-        .planet::before {
+        .image-wrap::before {
             content: "";
 
             position: absolute;
 
-            width: 115px;
-            height: 31px;
-
-            left: 50%;
-            top: 50%;
-
-            border:
-                1px solid
-                rgba(111,213,255,.65);
-
-            border-radius: 50%;
-
-            transform:
-                translate(-50%,-50%)
-                rotate(-22deg);
-
-            box-shadow:
-                0 0 15px
-                rgba(92,205,255,.12);
-        }
-
-
-        .planet::after {
-            content: "";
-
-            position: absolute;
-
-            width: 6px;
-            height: 6px;
-
-            left: -18px;
-            top: 39px;
-
-            border-radius: 50%;
-
-            background: #fff;
-
-            box-shadow:
-                0 0 8px #fff,
-                0 0 15px #5fe1ff;
-        }
-
-
-        .orbit-line {
-            position: absolute;
-
-            width: 132px;
-            height: 132px;
+            inset: -12px;
 
             border:
                 1px solid
@@ -831,14 +686,11 @@
             border-radius: 50%;
 
             animation:
-                orbitSpin
-                12s
-                linear
-                infinite;
+                imageRing 10s linear infinite;
         }
 
 
-        .orbit-line::before {
+        .image-wrap::after {
             content: "";
 
             position: absolute;
@@ -846,104 +698,61 @@
             width: 7px;
             height: 7px;
 
-            left: 16px;
-            top: 16px;
+            top: 4px;
+            right: 19px;
 
             border-radius: 50%;
 
-            background: #9d8bff;
+            background: #fff;
 
             box-shadow:
-                0 0 10px #9d8bff;
+                0 0 8px #fff,
+                0 0 15px #65ddff;
         }
 
 
-        @keyframes orbitSpin {
+        .profile-image {
+            width: 100%;
+            height: 100%;
 
-            to {
-                transform:
-                    rotate(360deg);
-            }
+            display: block;
 
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 3px solid #060915;
+
+            background: #0a0e1c;
         }
 
 
-        @keyframes planetFloat {
+        @keyframes imageFloat {
 
             0%,
             100% {
-                transform:
-                    translateY(0);
+                transform: translateY(0);
             }
 
             50% {
-                transform:
-                    translateY(-6px);
+                transform: translateY(-8px);
+            }
+
+        }
+
+
+        @keyframes imageRing {
+
+            to {
+                transform: rotate(360deg);
             }
 
         }
 
 
         /* =====================================================
-           404
+           HEADING
         ===================================================== */
-
-        .error-code {
-            font-family:
-                "Space Grotesk",
-                sans-serif;
-
-            font-size:
-                clamp(
-                    4.5rem,
-                    10vw,
-                    7.2rem
-                );
-
-            font-weight: 700;
-
-            line-height: .9;
-
-            letter-spacing: -.07em;
-
-            margin-bottom: 17px;
-
-            background:
-                linear-gradient(
-                    120deg,
-                    #ffffff 5%,
-                    #9ae9ff 38%,
-                    #9584ff 67%,
-                    #e0c2ff 100%
-                );
-
-            -webkit-background-clip:
-                text;
-
-            background-clip:
-                text;
-
-            color: transparent;
-
-            filter:
-                drop-shadow(
-                    0 0 25px
-                    rgba(105,122,255,.14)
-                );
-
-            opacity: 0;
-
-            transform:
-                translateY(15px);
-
-            animation:
-                appear
-                .8s
-                ease
-                .15s
-                forwards;
-        }
-
 
         h1 {
             font-family:
@@ -952,154 +761,84 @@
 
             font-size:
                 clamp(
-                    1.8rem,
-                    3.5vw,
-                    2.55rem
+                    2.1rem,
+                    5vw,
+                    3.3rem
                 );
 
             font-weight: 600;
 
-            line-height: 1.15;
+            line-height: 1.1;
 
-            letter-spacing: -.04em;
+            letter-spacing: -.045em;
 
-            margin-bottom: 14px;
+            margin-bottom: 16px;
+
+            background:
+                linear-gradient(
+                    115deg,
+                    #ffffff 10%,
+                    #aeeaff 42%,
+                    #9b8cff 70%,
+                    #e2c8ff 100%
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
 
             opacity: 0;
 
-            transform:
-                translateY(15px);
+            transform: translateY(16px);
 
             animation:
-                appear
-                .8s
-                ease
-                .25s
-                forwards;
+                appear .8s ease .22s forwards;
         }
 
 
         .description {
-            max-width: 520px;
+            max-width: 500px;
 
-            margin:
-                0 auto
-                27px;
+            margin-inline: auto;
 
             color: var(--muted);
 
-            font-size: .97rem;
+            font-size: .98rem;
 
             line-height: 1.7;
 
             opacity: 0;
 
-            transform:
-                translateY(15px);
+            transform: translateY(16px);
 
             animation:
-                appear
-                .8s
-                ease
-                .35s
-                forwards;
+                appear .8s ease .34s forwards;
         }
 
 
         /* =====================================================
-           ACTIONS
+           REDIRECT TEXT
         ===================================================== */
 
-        .actions {
-            opacity: 0;
-
-            transform:
-                translateY(15px);
-
-            animation:
-                appear
-                .8s
-                ease
-                .45s
-                forwards;
-        }
-
-
-        .home-button {
-            min-height: 48px;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            padding:
-                0 21px;
-
-            border-radius: 14px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #7767ff,
-                    #469dd6
-                );
-
-            color: #fff;
-
-            font-size: .9rem;
-
-            font-weight: 600;
-
-            box-shadow:
-                0 12px 32px
-                rgba(100,104,255,.2);
-
-            transition:
-                transform .25s ease,
-                box-shadow .25s ease;
-        }
-
-
-        .home-button:hover {
-            transform:
-                translateY(-3px);
-
-            box-shadow:
-                0 18px 40px
-                rgba(100,104,255,.3);
-        }
-
-
-        .arrow {
-            font-size: 1.05rem;
-
-            transition:
-                transform .25s ease;
-        }
-
-
-        .home-button:hover
-        .arrow {
-            transform:
-                translateX(-3px);
-        }
-
-
         .redirect {
-            margin-top: 20px;
+            margin-top: 26px;
 
             color: #707d99;
 
-            font-size: .78rem;
+            font-size: .8rem;
+
+            opacity: 0;
+
+            transform: translateY(16px);
+
+            animation:
+                appear .8s ease .46s forwards;
         }
 
 
         .redirect strong {
-            color: #b8c4dd;
+            color: #c1cbe0;
 
             font-weight: 600;
         }
@@ -1140,7 +879,7 @@
 
 
         /* =====================================================
-           ENTRANCE
+           ANIMATION
         ===================================================== */
 
         @keyframes appear {
@@ -1157,18 +896,18 @@
 
 
         /* =====================================================
-           SHORT DESKTOP HEIGHTS
+           SHORT DESKTOP HEIGHT
         ===================================================== */
 
-        @media (
-            min-width: 700px
-        ) and (
-            max-height: 760px
-        ) {
+        @media
+        (min-width: 700px)
+        and
+        (max-height: 760px) {
 
             header {
                 min-height: 68px;
             }
+
 
             main {
                 padding:
@@ -1177,66 +916,38 @@
                     25px;
             }
 
-            .orbit-wrap {
-                width: 115px;
-                height: 115px;
 
-                margin-bottom: 10px;
+            .image-wrap {
+                width: 120px;
+                height: 120px;
+
+                margin-bottom: 20px;
             }
 
-            .planet {
-                width: 60px;
-                height: 60px;
-            }
 
-            .planet::before {
-                width: 92px;
-                height: 25px;
-            }
-
-            .planet::after {
-                left: -15px;
-                top: 30px;
-            }
-
-            .orbit-line {
-                width: 105px;
-                height: 105px;
-            }
-
-            .error-code {
+            h1 {
                 font-size:
                     clamp(
-                        4rem,
-                        8vw,
-                        5.8rem
+                        1.9rem,
+                        4vw,
+                        2.7rem
                     );
 
                 margin-bottom: 12px;
             }
 
-            h1 {
-                font-size:
-                    clamp(
-                        1.65rem,
-                        3vw,
-                        2.15rem
-                    );
-
-                margin-bottom: 10px;
-            }
 
             .description {
-                margin-bottom: 20px;
-
                 font-size: .92rem;
 
                 line-height: 1.55;
             }
 
+
             .redirect {
-                margin-top: 14px;
+                margin-top: 18px;
             }
+
 
             footer {
                 padding:
@@ -1277,8 +988,6 @@
 
 
             main {
-                align-items: center;
-
                 padding:
                     25px
                     20px
@@ -1286,56 +995,20 @@
             }
 
 
-            .orbit-wrap {
-                width: 120px;
-                height: 120px;
+            .image-wrap {
+                width: 130px;
+                height: 130px;
 
-                margin-bottom: 12px;
-            }
-
-
-            .planet {
-                width: 64px;
-                height: 64px;
-            }
-
-
-            .planet::before {
-                width: 98px;
-                height: 27px;
-            }
-
-
-            .planet::after {
-                left: -16px;
-                top: 33px;
-            }
-
-
-            .orbit-line {
-                width: 110px;
-                height: 110px;
-            }
-
-
-            .error-code {
-                font-size:
-                    clamp(
-                        4.2rem,
-                        24vw,
-                        6rem
-                    );
-
-                margin-bottom: 14px;
+                margin-bottom: 24px;
             }
 
 
             h1 {
                 font-size:
                     clamp(
-                        1.7rem,
-                        8vw,
-                        2rem
+                        2rem,
+                        10vw,
+                        2.65rem
                     );
             }
 
@@ -1344,8 +1017,6 @@
                 font-size: .92rem;
 
                 line-height: 1.65;
-
-                margin-bottom: 24px;
             }
 
 
@@ -1363,18 +1034,18 @@
 
 
         /* =====================================================
-           VERY SHORT MOBILE SCREENS
+           VERY SHORT MOBILE
         ===================================================== */
 
-        @media (
-            max-width: 600px
-        ) and (
-            max-height: 680px
-        ) {
+        @media
+        (max-width: 600px)
+        and
+        (max-height: 650px) {
 
             header {
                 min-height: 62px;
             }
+
 
             main {
                 padding:
@@ -1383,74 +1054,41 @@
                     20px;
             }
 
-            .orbit-wrap {
-                width: 88px;
-                height: 88px;
 
-                margin-bottom: 5px;
+            .image-wrap {
+                width: 92px;
+                height: 92px;
+
+                margin-bottom: 15px;
             }
 
-            .planet {
-                width: 48px;
-                height: 48px;
-            }
-
-            .planet::before {
-                width: 74px;
-                height: 20px;
-            }
-
-            .planet::after {
-                left: -12px;
-                top: 24px;
-
-                width: 5px;
-                height: 5px;
-            }
-
-            .orbit-line {
-                width: 82px;
-                height: 82px;
-            }
-
-            .error-code {
-                font-size: 3.8rem;
-
-                margin-bottom: 8px;
-            }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
 
-                margin-bottom: 8px;
+                margin-bottom: 9px;
             }
+
 
             .description {
-                font-size: .86rem;
+                font-size: .84rem;
 
                 line-height: 1.5;
-
-                margin-bottom: 17px;
             }
 
-            .home-button {
-                min-height: 44px;
-
-                padding:
-                    0 18px;
-            }
 
             .redirect {
-                margin-top: 11px;
+                margin-top: 13px;
 
                 font-size: .72rem;
             }
 
+
             footer {
                 padding:
-                    11px
+                    10px
                     0
-                    13px;
+                    12px;
             }
 
         }
@@ -1460,19 +1098,13 @@
            REDUCED MOTION
         ===================================================== */
 
-        @media (
-            prefers-reduced-motion:
-            reduce
-        ) {
+        @media (prefers-reduced-motion: reduce) {
 
             *,
             *::before,
             *::after {
-                animation-duration:
-                    .001ms !important;
-
-                animation-iteration-count:
-                    1 !important;
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
             }
 
         }
@@ -1536,7 +1168,7 @@
 
 
     <!-- =====================================================
-         MAIN
+         CONTENT
     ===================================================== -->
 
     <main>
@@ -1544,68 +1176,45 @@
         <div class="content">
 
 
-            <!-- Orbit -->
+            <!--
+                Replace /lost-image.jpg
+                with your actual image path.
+            -->
 
-            <div
-                class="orbit-wrap"
-                aria-hidden="true"
-            >
+            <div class="image-wrap">
 
-                <div class="orbit-line"></div>
+                <img
+                    src="babe.jpg"
+                    alt="Babe"
+                    class="profile-image"
+                >
 
-                <div class="planet"></div>
-
-            </div>
-
-
-            <!-- 404 -->
-
-            <div class="error-code">
-                404
             </div>
 
 
             <h1>
-                Lost in spacetime.
+                Are you lost, baby girl?
             </h1>
 
 
             <p class="description">
 
-                The page you're looking for seems to have
-                drifted beyond the observable universe.
-                Let's get you back to familiar space.
+                Looks like you've wandered a little too far
+                into the universe. Don't worry — you'll be
+                sent back to familiar space soon.
 
             </p>
 
 
-            <div class="actions">
+            <p class="redirect">
 
-                <a
-                    href="/"
-                    class="home-button"
-                >
+                Returning to the Home 🏡 in
 
-                    <span class="arrow">
-                        ←
-                    </span>
+                <strong>
+                    <span id="countdown">10</span>s
+                </strong>
 
-                    Return Home
-
-                </a>
-
-
-                <p class="redirect">
-
-                    Returning home automatically in
-
-                    <strong>
-                        <span id="countdown">5</span>s
-                    </strong>
-
-                </p>
-
-            </div>
+            </p>
 
         </div>
 
@@ -1635,9 +1244,7 @@
 
 <script>
 
-    /* =====================================================
-       CURRENT YEAR
-    ===================================================== */
+    /* Current year */
 
     document
         .getElementById("year")
@@ -1647,10 +1254,10 @@
 
 
     /* =====================================================
-       5 SECOND REDIRECT
+       10 SECOND REDIRECT
     ===================================================== */
 
-    let seconds = 5;
+    let seconds = 10;
 
     const countdown =
         document.getElementById("countdown");
